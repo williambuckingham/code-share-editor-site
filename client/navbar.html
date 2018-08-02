@@ -1,0 +1,30 @@
+<template name="navbar">
+	 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	    <div class="container">
+	      <a class="navbar-brand" href="/">TextCircle</a>
+	      	<ul class="navbar- mr-auto">
+	      		<li class="nav-item navbar-left">
+	      			<a href="#" class="nav-link js-add-doc">
+	      					new document
+      				</a>
+      			</li>
+            <!-- dropdown list-->
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <div class="dropdown-menu">
+                {{#each documents}}
+                <a class="dropdown-item" href="/documents/{{_id}}">{{title}}</a>
+                {{/each}}
+              </div>
+            </li>
+
+            
+	  		 </ul>
+         <div class="nav-item navbar-right">{{> loginButtons align="right"}}</div> 
+
+
+
+	      
+      </div>
+  	</nav>
+</template>
